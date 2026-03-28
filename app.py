@@ -9,7 +9,7 @@ import io
 # Load Groq API Key
 # ─────────────────────────────────────────
 load_dotenv()
-GROQ_API_KEY = os.getenv("groq_api")
+GROQ_API_KEY = os.getenv("GROQ_API")
 
 def analyze_with_groq(prompt: str) -> str:
     """Send prompt to Groq API and return response."""
