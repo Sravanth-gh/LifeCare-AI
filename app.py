@@ -9,13 +9,13 @@ import io
 # Load Groq API Key
 # ─────────────────────────────────────────
 load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API")
+GROQ_API = os.getenv("GROQ_API")
 
 def analyze_with_groq(prompt: str) -> str:
     """Send prompt to Groq API and return response."""
     url = "https://api.groq.com/openai/v1/chat/completions"
     headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Authorization": f"Bearer {GROQ_API}",
         "Content-Type": "application/json"
     }
     payload = {
